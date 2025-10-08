@@ -1,69 +1,9 @@
-Something Important
+create a webapp where i can upload files and i can create custom urls like "whatever-the-app-domain-is.com/private-page"
 
 
-import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyTabApp());
-}
+the private-page is the page and for every unique string there can be a page and whoever goes to the page they can access the files on that page and even upload files on that page.
 
-class MyTabApp extends StatelessWidget {
-  const MyTabApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Custom TabBar Example',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const TabBarDemo(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
 
-class TabBarDemo extends StatelessWidget {
-  const TabBarDemo({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('TabBar Example'),
-          bottom: PreferredSize(
-            preferredSize: const Size.fromHeight(50),
-            child: Container(
-              margin: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(color: Colors.blue, width: 1.5),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: TabBar(
-                labelColor: Colors.white,
-                unselectedLabelColor: Colors.blue,
-                indicator: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                tabs: const [
-                  Tab(text: "Scheme Wise"),
-                  Tab(text: "Type Wise"),
-                  Tab(text: "SubType Wise"),
-                ],
-              ),
-            ),
-          ),
-        ),
-        body: const TabBarView(
-          children: [
-            Center(child: Text("Scheme Wise Content")),
-            Center(child: Text("Type Wise Content")),
-            Center(child: Text("SubType Wise Content")),
-          ],
-        ),
-      ),
-    );
-  }
-}
+we can also make the pages private or public and for private pages there will be a password needed. you can use any service for backened and file storage. 
